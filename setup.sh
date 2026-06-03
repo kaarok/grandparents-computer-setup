@@ -6,7 +6,7 @@ echo "Starting setup..."
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Load helpers
-source "$SCRIPT_DIR/../lib/utils.sh"
+source "$SCRIPT_DIR/lib/utils.sh"
 
 # Run modules
 run_module "$SCRIPT_DIR/modules/updates.sh"
