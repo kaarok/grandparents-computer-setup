@@ -15,3 +15,14 @@ run_module() {
         exit 1
     fi
 }
+
+set_gsetting() {
+    local schema="$1"
+    local key="$2"
+    local value="$3"
+
+    if [[ "$(gsettings get "$schema" "$key")" != "$value" ]]; then
+        gsettings set "$schema" "$key" "$value"
+        echo "Set $schema $key"
+    fi
+}
