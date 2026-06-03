@@ -2,9 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Load helpers
-source "$SCRIPT_DIR/lib/utils.sh"
+source "$SCRIPT_DIR/../lib/utils.sh"
 
 echo "Configuring GNOME settings..."
 
