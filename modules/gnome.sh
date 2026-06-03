@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Load helpers
+source "$SCRIPT_DIR/lib/utils.sh"
+
 echo "Configuring GNOME settings..."
 
 if [[ -n "${DBUS_SESSION_BUS_ADDRESS:-}" ]]; then
