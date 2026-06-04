@@ -7,7 +7,7 @@ source "$SCRIPT_DIR/../lib/utils.sh"
 echo "Configuring GNOME settings..."
 
 if [[ -n "${DBUS_SESSION_BUS_ADDRESS:-}" ]]; then
-    set_gsetting org.gnome.notifications show-banners false
+    set_gsetting org.gnome.desktop.notifications show-banners false
     set_gsetting org.gnome.desktop.interface enable-hot-corners false
     set_gsetting org.gnome.desktop.screensaver lock-enabled false
     set_gsetting org.gnome.desktop.interface enable-animations false
